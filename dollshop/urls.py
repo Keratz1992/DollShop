@@ -1,6 +1,10 @@
 
 from django.urls import path
 
-urlpatterns = [
+from dollshop.views import homepage
 
+app_name = 'dollshop'
+
+urlpatterns = [
+    path('', homepage, name='homepage')
 ]

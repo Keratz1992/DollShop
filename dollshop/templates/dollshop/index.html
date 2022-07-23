@@ -22,7 +22,7 @@
         <div class="container">
             <nav class="header__row">
                 <div class="header__logo">
-                    <a href="#"><img src="" alt="LOGO"></a>
+                    <a href="{% url 'dollshop:homepage' %}"><img src="" alt="LOGO"></a>
                 </div>
             
                 <ul class="header__nav">
@@ -318,5 +318,11 @@
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../../static/js/main.js"></script>
+
+<!--    {% for prd in product %}-->
+<!--        {{ prd.name }}<br>-->
+<!--        {{ prd.price }} руб.<br>-->
+<!--    {% endfor %}-->
+
 </body>
 </html>
