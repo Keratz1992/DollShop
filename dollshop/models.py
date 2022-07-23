@@ -18,6 +18,8 @@ class Product(models.Model):
     description = models.TextField(max_length=1000, verbose_name='Описание')
     date_create = models.DateField(auto_now_add=True, verbose_name='Дата добавления')
     price = models.DecimalField(max_digits=9, decimal_places=2, verbose_name='Цена')
+    image = models.ImageField(default='image/no_image.png', upload_to='image/', null=True, blank=True,
+                              verbose_name='Изображение')
 
 
     def __str__(self):
