@@ -4,12 +4,13 @@
 }
 
 .shop__row {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 360px);
+    flex-flow: wrap;
     text-align: center;
     align-items: center;
     justify-content: space-around;
     column-gap: 10px;
-    flex-wrap: wrap;
 }
 .product {
     margin: 10px;
@@ -23,6 +24,8 @@
     height: 180px;
 }
 .product__description {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .name {
     padding: 10px 0;

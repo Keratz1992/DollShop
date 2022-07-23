@@ -325,9 +325,10 @@ legend {
   padding-bottom: 100px; }
 
 .shop__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 360px);
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -335,9 +336,7 @@ legend {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-column-gap: 10px;
-          column-gap: 10px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+          column-gap: 10px; }
 
 .product {
   margin: 10px;
@@ -350,6 +349,10 @@ legend {
   margin-top: 5px;
   max-width: 180px;
   height: 180px; }
+
+.product__description {
+  padding-left: 10px;
+  padding-right: 10px; }
 
 .name {
   padding: 10px 0;
