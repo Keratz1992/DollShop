@@ -1,0 +1,41 @@
+.menu {
+    padding: 10px 0;
+}
+
+.menu__row {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color: #14dcc4;
+    border-radius: 20px;
+}
+.menu__item {
+    color: #09657b;
+    transition: color 0.2s ease-in;
+
+    &-img {
+        width: 64px;
+        height: 64px;
+        fill: #fff;
+        stroke: #09657b;
+
+        transition: stroke 0.2s ease-in;
+    }
+
+    &:hover {
+        color: $color-hover;
+
+        .menu__item-img {
+            stroke: $stroke-hover;
+        }
+    }
+}
+.menu__item--active {
+    color: $color-hover !important;
+
+    .menu__item-img {
+        stroke: $stroke-hover;
+    }
+}
