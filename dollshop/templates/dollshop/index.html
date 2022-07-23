@@ -319,59 +319,50 @@
             </div>
         </section>
 
+        {% for prd in product %}
         <section class="shop">
+
             <div class="container">
                 <div class="shop__row">
                     <div class="product">
-                        <img class="product__img" src="../../../static/img/product/large.jpg" alt="product"></img>
+                        <img class="product__img" src="{{ prd.image.url }}" alt="product"></img>
                         <div class="product__description">
-                            <h3 class="name">Навание</h3>
-                            <p class="description">Описание</p>
+                            <h3 class="name">{{ prd.name }}</h3>
+                            <p class="description">{{ prd.description }}</p>
                             <div class="product__prise">
-                                <p class="date_create">Дата добавления</p>
-                                <p class="price">Цена</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img class="product__img" src="../../../static/img/product/large.jpg" alt="product"></img>
-                        <div class="product__description">
-                            <h3 class="name">Навание</h3>
-                            <p class="description">Описание</p>
-                            <div class="product__prise">
-                                <p class="date_create">Дата добавления</p>
-                                <p class="price">Цена</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img class="product__img" src="../../../static/img/product/large.jpg" alt="product"></img>
-                        <div class="product__description">
-                            <h3 class="name">Навание</h3>
-                            <p class="description">Описание</p>
-                            <div class="product__prise">
-                                <p class="date_create">Дата добавления</p>
-                                <p class="price">Цена</p>
+                                <p class="date_create">{{ prd.date_create }}</p>
+                                <p class="price">{{ prd.price }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
+        </section>
+        {% endfor %}
     </main>
+
+    {% for p in product %}
+    <div style="display: inline-block; margin-left: 10px; width: 300px; ">
+
+        <div style="border: black solid 1px">
+
+            <h1 style="text-align: center">{{p.name}}</h1>
+        </div>
+
+    </div>
+    {% endfor %}
+
+
+    </div>
+
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="../../../static/js/main.js"></script>
-
-    {% for prd in product %}
-        {{ prd.name }}<br>
-        {{ prd.price }} руб.<br>
-        <img src="{{ prd.image.url }}">
-    {% endfor %}
 
 </body>
 </html>
