@@ -13,11 +13,13 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
             integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<script
+
+        <script
 			src="https://kit.fontawesome.com/1ade67d5cd.js"
 			crossorigin="anonymous"
 		></script>
 	</head>
+
 <body>
     <header class="header">
         <div class="container">
@@ -319,11 +321,11 @@
             </div>
         </section>
 
-        {% for prd in product %}
-        <section class="shop">
 
+        <section class="shop">
             <div class="container">
                 <div class="shop__row">
+                    {% for prd in product %}
                     <div class="product">
                         <img class="product__img" src="{{ prd.image.url }}" alt="product"></img>
                         <div class="product__description">
@@ -335,24 +337,25 @@
                             </div>
                         </div>
                     </div>
+                    {% endfor %}
                 </div>
             </div>
-
         </section>
-        {% endfor %}
+
     </main>
 
-    {% for p in product %}
-    <div style="display: inline-block; margin-left: 10px; width: 300px; ">
-
-        <div style="border: black solid 1px">
-
-            <h1 style="text-align: center">{{p.name}}</h1>
-        </div>
-
     </div>
-    {% endfor %}
 
+<!--    {% for p in product %}-->
+<!--    <div style="display: inline-block; margin-left: 10px; width: 300px; ">-->
+
+<!--        <div style="border: black solid 1px">-->
+
+<!--            <h1 style="text-align: center">{{p.name}}</h1>-->
+<!--        </div>-->
+
+<!--    </div>-->
+<!--    {% endfor %}-->
 
     </div>
 
