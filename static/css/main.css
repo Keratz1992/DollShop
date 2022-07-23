@@ -142,15 +142,16 @@ legend {
   display: -ms-flexbox;
   display: flex;
   -webkit-column-gap: 30px;
-          column-gap: 30px; }
+          column-gap: 30px;
+  /*     .nav__link--active {
+      color: $color-hover;
+  } */ }
   .header__nav .nav__link {
     color: #fff;
     -webkit-transition: color 0.2s ease-in;
     transition: color 0.2s ease-in; }
     .header__nav .nav__link:hover {
       color: #fcc9a9; }
-  .header__nav .nav__link--active {
-    color: #fcc9a9; }
 
 .header__cards {
   display: -webkit-box;
